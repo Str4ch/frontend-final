@@ -15,13 +15,17 @@ const App = () => {
     <>
     <Router>
       <NavBar/>
-      <Routes>
-        <Route path="/" element={< HomePage/>}/>
-        <Route path="/login" element={< LoginPage/>}/>
-        <Route path="/signup" element={<SignUpPage/>}/>
-        <Route path="/create-product"element={<CreateProduct/>}/>
-        <Route path="*" element={<NotFoundPage/>}/>
-      </Routes>
+      <main 
+      style={{ minHeight: "calc(100vh - 140px)" }}
+      className="container d-flex flex-column justify-content-center align-items-center">
+        <Routes>
+          <Route path="/" element={< HomePage/>}/>
+          <Route path="/login" element={< LoginPage/>}/>
+          <Route path="/signup" element={<SignUpPage/>}/>
+          <Route path="/create-product"element={<CreateProduct/>}/>
+          <Route path="*" element={<NotFoundPage/>}/>
+        </Routes>
+      </main>
       <FooterComp/>
     </Router>
     </> 
