@@ -1,4 +1,4 @@
-const uri = "http://localhost:3000/api/products";
+const uri = "https://res-api-ecommerce-kk69.onrender.com/api/products";
 
 export const fetchProducts = async (jwt) => {
   try {

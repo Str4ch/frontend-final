@@ -37,7 +37,7 @@ const SignUpPage = () => {
             if(!checkEmail.checkEmpty(formData["email"])) throw Error("Bad email input")
             setError(null)
             
-            const response = await fetch("http://localhost:3000/api/users/signup", {
+            const response = await fetch("https://res-api-ecommerce-kk69.onrender.com/api/users/signup", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
