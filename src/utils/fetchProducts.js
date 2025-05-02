@@ -1,8 +1,14 @@
 const uri = "http://localhost:3000/api/products";
 
-export const fetchProducts = async () => {
+export const fetchProducts = async (jwt) => {
   try {
-    const response = await fetch(uri);
+    const jwtToken ="Bearer " + (localStorage.getItem("token"))
+    const response = await fetch(uri, {
+      headers: {
+        "authorization": jwtToken
+      }
+    }
+    );
     if (!response.ok) {
       throw new Error("Network response was not ok");
     }
